@@ -54,12 +54,12 @@ let annualReturn = `${parseFloat(quarterlyReturn*4).toFixed(2)}`
 
   // generate HTML list with variables
     $('#results-list').append(
-      `<li><h3>Ticker Symbol: ${tickerSymbol}</h3>
-       <li><h3>Price per share: $${tickerclosePrice}</h3>
-       <li><h3>Current Dividend: $${dividendPrice}</h3>
-       <li><h3>How many shares you can afford: ${shares}</h3>
-       <li><h3>Quarterly return: $${quarterlyReturn}</h3>
-       <li><h3>Annual return: $${annualReturn}</h3>
+      `<li><h3 class='upperCase'>Ticker Symbol: ${tickerSymbol}</h3>
+       <li><h3 class='upperCase'>Price per share: $${tickerclosePrice}</h3>
+       <li><h3 class='upperCase'>Current Dividend: $${dividendPrice}</h3>
+       <li><h3 class='upperCase'>How many shares you can afford: ${shares}</h3>
+       <li><h3 class='upperCase'>Quarterly return: $${quarterlyReturn}</h3>
+       <li><h3 class='upperCase'>Annual return: $${annualReturn}</h3>
        </li>`     
     )
 };
