@@ -177,7 +177,7 @@ footer {
  svg {
     background-color: lightslategray;
     border-radius: 10px;
-    padding-top: 2px;
+    padding: 2px;
  }
 
  @media only screen and (min-width: 768px) {
