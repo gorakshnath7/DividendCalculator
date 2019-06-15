@@ -6,25 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dividend Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="background"></div>
     <div class="container">
         <h1>Dividend Calculator</h1>
 
         <form id="js-form">
-            <label for="max-results">Amount to invest:</label>
-            <input type="number" name="max-results" id="js-max-results" placeholder="10000">
-
+            <label for="max-results">Enter how much to invest:</label>
+            <input type="number" name="max-results" id="js-max-results" placeholder="$10,000" class="amountInput">
+            <br>
             <label for="search-term">Enter stock ticker symbol:</label>
-            <input type="text" name="search-term" id="js-search-term" class="upperCase" size="5" placeholder="mmm" required>
-
-            <input type="submit" value="Go!">
+            <input type="text" name="search-term" id="js-search-term" class="upperCase tickerInput" size="5" placeholder="mmm" required autocomplete="off">
+            <br>
+            <section id="search" class="hidde">
+                <ul id="search-list">
+                </ul>
+            </section>
+            <div class="goButton">
+                <input type="submit" value="Go!" class="submitButton">
+            </div>
+            <!---<div>
+                <p>You can use seeking alpha to search and locate companies and ticker symbols:</p>
+                <a href="https://seekingalpha.com/">seekingAlpha</a>
+            </div>--->
         </form>
 
         <p id="js-error-message" class="error-message"></p>
         <section id="results" class="hidden">
-          <h2>Search results</h2>
+          <h1>Search results</h1>
           <ul id="results-list">
           </ul>
         </section>
