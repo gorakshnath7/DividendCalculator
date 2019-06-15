@@ -72,18 +72,6 @@ function displayResults(responseJson, investAmount) {
   $('#results').removeClass('hidden');
 }
 
-/* Need paid API 
-function displaySearchList(responseJson) {
-    $('#search-list').empty();
-    $('#search-list').append(
-        `<li>${responseJson[tickerSeries][0][tickerSymbol]}               ${responseJson[tickerSeries][0][tickerName]}
-         <li>${responseJson[tickerSeries][1][tickerSymbol]}               ${responseJson[tickerSeries][1][tickerName]}
-         <li>${responseJson[tickerSeries][2][tickerSymbol]}               ${responseJson[tickerSeries][2][tickerName]}
-         <li>${responseJson[tickerSeries][3][tickerSymbol]}               ${responseJson[tickerSeries][3][tickerName]} 
-         <li>${responseJson[tickerSeries][4][tickerSymbol]}               ${responseJson[tickerSeries][4][tickerName]}</li>`
-    )
-}*/
-
 //send fetch request to API with params
 function queryAPI(params) {
     params.apikey = apiKey
@@ -122,24 +110,6 @@ function getStockResults(query, investAmount) {
     });
 }
 
-/* Need paid API 
-//API fetch for ticker search
-function getTickerSymbol(inputQuery){
-    const params = {
-        function: tickerApiFunction,
-        keywords: inputQuery,
-    }
-    queryAPI(params)
-    .then(responseJson => displaySearchList(responseJson))
-    .catch(err => {
-        $('#js-error-message').empty();
-        console.log(err)
-        console.log(err.message)
-        $('#js-error-message').text('This is not a valid stock ticker.')
-    });
-}
-*/
-
 //Submit listener for ticker symbol and investment amount
 function watchForm() {
   $('form').submit(event => {
@@ -151,16 +121,6 @@ function watchForm() {
     getStockResults(searchTerm, investAmount);
   });
 }
-
-/* Need paid API 
-//listener for ticker symbol field to populate text
-function tickerSymbolChange() {
-    $('#js-search-term').on('input', event => {
-        const tickerTerm = $('#js-search-term').val();
-        getTickerSymbol(tickerTerm);
-    });
-}
-*/
 
 //This is the currency modifier
 $("input[data-type='currency']").on({
