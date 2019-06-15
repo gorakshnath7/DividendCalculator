@@ -4,7 +4,7 @@ Automatically calculates dividend return based on investment amount and current 
 Motivation:
 I wanted a way to quickly see if I invested a certain amount into a stock what my dividend return would be.
 
-Screenshots
+Screenshot: <img src="Dividend-Calculator Screen Shot.png" width="30%">
 
 Built With:
 HTML
